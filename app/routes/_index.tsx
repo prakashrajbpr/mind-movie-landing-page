@@ -12,16 +12,51 @@ export default function Index() {
         </p>
 
         <Form method="post" className="space-y-4">
-          <input name="name" placeholder="Your Name" className="w-full p-3 border-2 border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" />
-          <textarea name="goal" placeholder="Your Main Goal or Affirmation" className="w-full p-3 border-2 border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" />
-          <textarea name="vision" placeholder="Visualize your ideal future" className="w-full p-3 border-2 border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" />
-          <textarea name="emotion" placeholder="Emotions you'll feel achieving it" className="w-full p-3 border-2 border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" />
-          <input name="quote" placeholder="Favorite Motivational Quote" className="w-full p-3 border-2 border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" />
-          <input name="music" placeholder="Preferred Music Style" className="w-full p-3 border-2 border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" />
-          <input name="images" placeholder="Image URLs (comma separated)" className="w-full p-3 border-2 border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" />
-          <input name="deadline" placeholder="When will this come true?" className="w-full p-3 border-2 border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" />
+          <input
+            name="name"
+            placeholder="Your Name"
+            className="text-black w-full p-3 border-2 border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+          />
+          <textarea
+            name="goal"
+            placeholder="Your Main Goal or Affirmation"
+            className="text-black w-full p-3 border-2 border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+          />
+          <textarea
+            name="vision"
+            placeholder="Visualize your ideal future"
+            className="text-black w-full p-3 border-2 border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+          />
+          <textarea
+            name="emotion"
+            placeholder="Emotions you'll feel achieving it"
+            className="text-black w-full p-3 border-2 border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+          />
+          <input
+            name="quote"
+            placeholder="Favorite Motivational Quote"
+            className="text-black w-full p-3 border-2 border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+          />
+          <input
+            name="music"
+            placeholder="Preferred Music Style"
+            className="text-black w-full p-3 border-2 border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+          />
+          <input
+            name="images"
+            placeholder="Image URLs (comma separated)"
+            className="text-black w-full p-3 border-2 border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+          />
+          <input
+            name="deadline"
+            placeholder="When will this come true?"
+            className="text-black w-full p-3 border-2 border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+          />
 
-          <button type="submit" className="w-full bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-purple-700 transition duration-300">
+          <button
+            type="submit"
+            className="w-full bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-purple-700 transition duration-300"
+          >
             Submit & Visualize ✨
           </button>
         </Form>
