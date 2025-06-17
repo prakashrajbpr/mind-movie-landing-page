@@ -1,17 +1,16 @@
+import type { LinksFunction } from "@remix-run/node";
 import {
   Links,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react"; // ✅ CORRECT SOURCE
-import type { LinksFunction } from "@remix-run/node";
+} from "@remix-run/react";
 
-// ✅ Import your Tailwind CSS
-import tailwindStyles from "./tailwind.css";
+import tailwindStylesheet from "./tailwind.css";
 
 export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: tailwindStyles },
+  { rel: "stylesheet", href: tailwindStylesheet },
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",
