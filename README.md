@@ -1,40 +1,39 @@
-# Welcome to Remix!
+# Mind Movie Generator 🎬
 
-- 📖 [Remix docs](https://remix.run/docs)
+This project is a landing page built using Remix and TypeScript to collect user input for generating a personalized AI-powered "Mind Movie".
 
-## Development
+## 🌐 Live Demo
+👉 [Deployed on Vercel](https://your-vercel-url.vercel.app)  
+*(Replace with your actual Vercel link)*
 
-Run the dev server:
+## 🚀 Features
+- Beautiful, responsive landing page
+- Clean form to collect:
+  - Name
+  - Main goal or affirmation
+  - Desired visual scenes
+  - Background music
+  - Target emotion
+- Built with Remix, TypeScript, and TailwindCSS
 
-```sh
-npm run dev
-```
+## 🛠 Tech Stack
+- [Remix](https://remix.run/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vercel](https://vercel.com/) for deployment
 
-## Deployment
+## 📄 Project Purpose
+This page collects structured plain text inputs from users that will be passed to an AI system to generate a "mind movie" — a short, inspiring video based on their personal goals and visions.
 
-First, build your app for production:
+## 📂 Project Structure
+- `/app/routes/_index.tsx` – main landing page with form
+- `tailwind.css` – Tailwind styles and dark mode support
+- `remix.config.js`, `postcss.config.js` – framework configs
 
-```sh
-npm run build
-```
+## 💡 Next Steps
+- Pass collected data to an AI video generation system
+- Add email input and optional video preview
+- Save form submissions (e.g., via Supabase or Firestore)
 
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+## 🧠 AI Video Tool Research
+See [`AI_Tools_Research.md`](./AI_Tools_Research.md)
