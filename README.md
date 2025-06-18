@@ -1,39 +1,58 @@
-# Mind Movie Generator 🎬
+# 🎬 Mind Movie Landing Page - (https://mind-movie-landing-page-ccdp.vercel.app)
 
-This project is a landing page built using Remix and TypeScript to collect user input for generating a personalized AI-powered "Mind Movie".
+A visually engaging and responsive landing page built using **Remix**, **TypeScript**, and **Tailwind CSS**, deployed on **Vercel**. This project is designed to collect essential user inputs to generate a personalized AI-powered "Mind Movie" — a motivational video aligned with the user's vision and goals.
 
-## 🌐 Live Demo
-👉 [Deployed on Vercel](https://your-vercel-url.vercel.app)  
-*(Replace with your actual Vercel link)*
+---
 
-## 🚀 Features
-- Beautiful, responsive landing page
-- Clean form to collect:
-  - Name
-  - Main goal or affirmation
-  - Desired visual scenes
-  - Background music
-  - Target emotion
-- Built with Remix, TypeScript, and TailwindCSS
+## 🧠 Project Purpose
 
-## 🛠 Tech Stack
-- [Remix](https://remix.run/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Vercel](https://vercel.com/) for deployment
+The Mind Movie concept helps individuals visualize their dreams, goals, and affirmations in a cinematic format. The landing page captures user input to guide an AI video generation system.
 
-## 📄 Project Purpose
-This page collects structured plain text inputs from users that will be passed to an AI system to generate a "mind movie" — a short, inspiring video based on their personal goals and visions.
+---
 
-## 📂 Project Structure
-- `/app/routes/_index.tsx` – main landing page with form
-- `tailwind.css` – Tailwind styles and dark mode support
-- `remix.config.js`, `postcss.config.js` – framework configs
+## ✨ Features
 
-## 💡 Next Steps
-- Pass collected data to an AI video generation system
-- Add email input and optional video preview
-- Save form submissions (e.g., via Supabase or Firestore)
+- Clean, responsive design with Tailwind CSS
+- Smooth animations for a modern UX
+- Structured form for collecting user vision and preferences
+- Deployed to Vercel for fast global access
+- Built with Remix for optimized server-side rendering and routing
 
-## 🧠 AI Video Tool Research
-See [`AI_Tools_Research.md`](./AI_Tools_Research.md)
+---
+
+## 📝 Form Inputs Collected
+
+The user is guided through submitting the following inputs:
+
+- **Full Name** – For personalizing the video  
+- **Deadline** – Timeline to achieve the goal  
+- **Main Goal or Affirmation** – A clear description of their objective  
+- **Ideal Future Visualization** – A vivid mental picture of their future success  
+- **Emotions** – The feelings associated with achieving the goal  
+- **Favorite Motivational Quote** – To inspire the visuals  
+- **Preferred Music Style** – Music genre that sets the mood (e.g., epic, calm)  
+- **Image URLs (Optional)** – Additional visuals to enhance the Mind Movie
+
+---
+
+## 🚀 Tech Stack
+
+- **Framework**: [Remix](https://remix.run/)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Deployment**: Vercel
+
+---
+
+## 🔧 Installation & Development
+
+```bash
+# Clone the repository
+git clone https://github.com/prakashrajbpr/mind-movie-landing-page.git
+cd mind-movie-landing-page
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
