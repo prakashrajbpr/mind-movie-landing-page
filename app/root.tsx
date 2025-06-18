@@ -9,7 +9,7 @@ import {
 } from "@remix-run/react";
 
 export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: "/tailwind.css?url" }, // reference public path
+  { rel: "stylesheet", href: tailwindStylesheet },
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",
