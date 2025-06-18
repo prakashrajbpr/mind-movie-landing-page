@@ -338,7 +338,7 @@ export default function MindMovieLanding() {
             {[
               {
                 name: "Prakash Raj",
-                role: "Working for Pegasus Innovations",
+                role: "Pegasus Innovations",
                 initials: "BPR",
                 color: "purple",
                 text: "My mind movie helped me visualize my business success. Within 6 months, I doubled my revenue. The power of visualization is real!"
