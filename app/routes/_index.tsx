@@ -290,15 +290,22 @@ export default function MindMovieLanding() {
           <div className="max-w-4xl mx-auto">
             <div className="relative bg-black rounded-3xl overflow-hidden shadow-2xl hover-lift">
               <div className="aspect-video bg-gradient-to-br from-purple-900 to-blue-900 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6 pulse-glow">
-                    <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Watch Sample Mind Movie</h3>
-                  <p className="text-white text-opacity-70">See how visualization transforms dreams into reality</p>
-                </div>
+                  <iframe
+                    src="https://www.youtube.com/embed/t8NjBg69y20"
+                    title="Mind Movie Visualization Demo"
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                    <div className="text-center">
+                      <div className="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6 pulse-glow">
+                        <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z"/>
+                        </svg>
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-2">Watch Sample Mind Movie</h3>
+                      <p className="text-white text-opacity-70">See how visualization transforms dreams into reality</p>
+                    </div>
               </div>
             </div>
           </div>
@@ -341,14 +348,14 @@ export default function MindMovieLanding() {
                 role: "Pegasus Innovations",
                 initials: "BPR",
                 color: "purple",
-                text: "My mind movie helped me visualize my business success. Within 6 months, I doubled my revenue. The power of visualization is real!"
+                text: "Creating my mind movie recently transformed my lifestyle and aura. I feel more aligned, confident, and positive every day. Visualization has truly shifted my energy—and everything around me is starting to reflect that."
               },
               {
                 name: "Vyash Natrajan",
                 role: "Data Analyst",
                 initials: "VN",
                 color: "blue",
-                text: "Watching my mind movie every morning transformed my performance. I achieved my Olympic dream using these visualization techniques."
+                text: "Watching my mind movie every morning completely changed how I show up as a data analyst. It sharpened my focus, boosted my confidence, and helped me land my dream role. Visualization isn’t just mindset work—it’s a powerful tool for real-world results."
               },
               {
                 name: "Anna Lee",
