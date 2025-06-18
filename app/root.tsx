@@ -1,5 +1,4 @@
 import type { LinksFunction } from "@remix-run/node";
-import tailwindStylesheet from "~/tailwind.css";
 import {
   Links,
   Meta,
@@ -8,8 +7,10 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import tailwindStylesheetUrl from "~/tailwind.css?url"; // ✅ use `?url` for Vite
+
 export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: tailwindStylesheet },
+  { rel: "stylesheet", href: tailwindStylesheetUrl }, // ✅ fix here too
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",
