@@ -1,7 +1,8 @@
-// app/routes/mind-movie.tsx
+// app/routes/index.tsx
 import { json, type ActionFunctionArgs, type MetaFunction } from "@remix-run/node";
 import { Form, useActionData, useNavigation } from "@remix-run/react";
 import { useEffect } from "react";
+import EnhancedMindMovieWizard from "../components/EnhancedMindMovieWizard";
 
 export const meta: MetaFunction = () => {
   return [
@@ -27,7 +28,7 @@ interface ActionData {
 
 export async function action({ request }: ActionFunctionArgs) {
   const formData = await request.formData();
-  
+
   const data = {
     name: formData.get("name") as string,
     goal: formData.get("goal") as string,
@@ -41,8 +42,8 @@ export async function action({ request }: ActionFunctionArgs) {
 
   // Validate required fields
   if (!data.name || !data.goal || !data.vision) {
-    return json<ActionData>({ 
-      error: "Please fill in all required fields (Name, Goal, and Vision)" 
+    return json<ActionData>({
+      error: "Please fill in all required fields (Name, Goal, and Vision)"
     });
   }
 
@@ -52,16 +53,16 @@ export async function action({ request }: ActionFunctionArgs) {
     // 2. Send email notifications
     // 3. Create the mind movie
     // 4. Integrate with your backend services
-    
+
     console.log("Mind Movie Request:", data);
-    
+
     // Simulate processing
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
+
     return json<ActionData>({ success: true, data });
   } catch (error) {
-    return json<ActionData>({ 
-      error: "Something went wrong. Please try again." 
+    return json<ActionData>({
+      error: "Something went wrong. Please try again."
     });
   }
 }
@@ -197,10 +198,10 @@ export default function MindMovieLanding() {
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="floating absolute top-20 left-10 w-32 h-32 bg-white bg-opacity-20 rounded-full blur-xl"></div>
-          <div className="floating absolute top-40 right-20 w-24 h-24 bg-purple-300 bg-opacity-30 rounded-full blur-lg" style={{animationDelay: '-2s'}}></div>
-          <div className="floating absolute bottom-40 left-1/4 w-20 h-20 bg-blue-300 bg-opacity-25 rounded-full blur-lg" style={{animationDelay: '-4s'}}></div>
+          <div className="floating absolute top-40 right-20 w-24 h-24 bg-purple-300 bg-opacity-30 rounded-full blur-lg" style={{ animationDelay: '-2s' }}></div>
+          <div className="floating absolute bottom-40 left-1/4 w-20 h-20 bg-blue-300 bg-opacity-25 rounded-full blur-lg" style={{ animationDelay: '-4s' }}></div>
         </div>
-        
+
         <div className="container mx-auto px-6 text-center relative z-10">
           <div className="section-reveal">
             <h1 className="text-6xl md:text-8xl font-black text-white mb-6 leading-tight">
@@ -217,7 +218,7 @@ export default function MindMovieLanding() {
             </div>
           </div>
         </div>
-        
+
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white opacity-60">
           <div className="animate-bounce">
@@ -239,7 +240,7 @@ export default function MindMovieLanding() {
               The only platform that combines neuroscience, psychology, and cutting-edge technology to create personalized mind movies that accelerate your success
             </p>
           </div>
-          
+
           {/* USP Cards */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="glass-effect p-8 rounded-3xl hover-lift text-center">
@@ -252,7 +253,7 @@ export default function MindMovieLanding() {
               <h3 className="text-2xl font-bold text-gray-800 mb-4">Scientifically Proven</h3>
               <p className="text-gray-600">Based on neuroscience research showing visualization increases achievement by 42%</p>
             </div>
-            
+
             <div className="glass-effect p-8 rounded-3xl hover-lift text-center">
               <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -262,7 +263,7 @@ export default function MindMovieLanding() {
               <h3 className="text-2xl font-bold text-gray-800 mb-4">Lightning Fast Results</h3>
               <p className="text-gray-600">Users report mindset shifts within 7 days of consistent viewing</p>
             </div>
-            
+
             <div className="glass-effect p-8 rounded-3xl hover-lift text-center">
               <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -285,27 +286,27 @@ export default function MindMovieLanding() {
               Every mind movie is a cinematic masterpiece featuring you as the star of your own success story
             </p>
           </div>
-          
+
           {/* Demo Video Placeholder */}
           <div className="max-w-4xl mx-auto">
             <div className="relative bg-black rounded-3xl overflow-hidden shadow-2xl hover-lift">
               <div className="aspect-video bg-gradient-to-br from-purple-900 to-blue-900 flex items-center justify-center">
-                  <iframe
-                    src="https://www.youtube.com/embed/t8NjBg69y20"
-                    title="Mind Movie Visualization Demo"
-                    className="w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                    <div className="text-center">
-                      <div className="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6 pulse-glow">
-                        <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M8 5v14l11-7z"/>
-                        </svg>
-                      </div>
-                      <h3 className="text-2xl font-bold text-white mb-2">Watch Sample Mind Movie</h3>
-                      <p className="text-white text-opacity-70">See how visualization transforms dreams into reality</p>
-                    </div>
+                <iframe
+                  src="https://www.youtube.com/embed/t8NjBg69y20"
+                  title="Mind Movie Visualization Demo"
+                  className="w-full h-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6 pulse-glow">
+                    <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Watch Sample Mind Movie</h3>
+                  <p className="text-white text-opacity-70">See how visualization transforms dreams into reality</p>
+                </div>
               </div>
             </div>
           </div>
@@ -319,7 +320,7 @@ export default function MindMovieLanding() {
             <h2 className="text-4xl font-bold text-gray-800 mb-6">Trusted by Achievers Worldwide</h2>
             <p className="text-xl text-gray-600">Join over 50,000 people who've transformed their lives</p>
           </div>
-          
+
           {/* Trust Indicators */}
           <div className="grid md:grid-cols-4 gap-8 mb-16 text-center">
             <div className="section-reveal">
@@ -339,7 +340,7 @@ export default function MindMovieLanding() {
               <div className="text-gray-600">Support</div>
             </div>
           </div>
-          
+
           Testimonials
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -399,7 +400,7 @@ export default function MindMovieLanding() {
                 Limited Time: Free Consultation Included
               </div>
             </div>
-            
+
             <div className="glass-effect p-8 md:p-12 rounded-3xl shadow-2xl">
               {actionData?.success && (
                 <div className="mb-6 p-4 bg-green-500 bg-opacity-20 border border-green-400 rounded-lg text-white">
@@ -407,126 +408,21 @@ export default function MindMovieLanding() {
                   <p>Thank you {actionData.data?.name}! We'll create your personalized mind movie and contact you within 24 hours.</p>
                 </div>
               )}
-              
+
               {actionData?.error && (
                 <div className="mb-6 p-4 bg-red-500 bg-opacity-20 border border-red-400 rounded-lg text-white">
                   <p>{actionData.error}</p>
                 </div>
               )}
-
-              <Form method="post" className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-white text-sm font-semibold mb-2">Your Name *</label>
-                    <input
-                      name="name"
-                      required
-                      placeholder="Enter your full name"
-                      className="w-full p-4 border-2 border-white border-opacity-30 rounded-xl bg-white bg-opacity-10 text-white placeholder-white placeholder-opacity-60 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-300"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-white text-sm font-semibold mb-2">Deadline</label>
-                    <input
-                      name="deadline"
-                      placeholder="When will this come true?"
-                      className="w-full p-4 border-2 border-white border-opacity-30 rounded-xl bg-white bg-opacity-10 text-white placeholder-white placeholder-opacity-60 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-300"
-                    />
-                  </div>
-                </div>
-                
-                <div>
-                  <label className="block text-white text-sm font-semibold mb-2">Your Main Goal or Affirmation *</label>
-                  <textarea
-                    name="goal"
-                    required
-                    rows={3}
-                    placeholder="Describe your primary goal in detail..."
-                    className="w-full p-4 border-2 border-white border-opacity-30 rounded-xl bg-white bg-opacity-10 text-white placeholder-white placeholder-opacity-60 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-300 resize-none"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-white text-sm font-semibold mb-2">Visualize Your Ideal Future *</label>
-                  <textarea
-                    name="vision"
-                    required
-                    rows={4}
-                    placeholder="Paint a vivid picture of your success..."
-                    className="w-full p-4 border-2 border-white border-opacity-30 rounded-xl bg-white bg-opacity-10 text-white placeholder-white placeholder-opacity-60 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-300 resize-none"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-white text-sm font-semibold mb-2">Emotions You'll Feel Achieving It</label>
-                  <textarea
-                    name="emotion"
-                    rows={3}
-                    placeholder="Describe the feelings of accomplishment..."
-                    className="w-full p-4 border-2 border-white border-opacity-30 rounded-xl bg-white bg-opacity-10 text-white placeholder-white placeholder-opacity-60 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-300 resize-none"
-                  />
-                </div>
-                
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-white text-sm font-semibold mb-2">Favorite Motivational Quote</label>
-                    <input
-                      name="quote"
-                      placeholder="Your power quote..."
-                      className="w-full p-4 border-2 border-white border-opacity-30 rounded-xl bg-white bg-opacity-10 text-white placeholder-white placeholder-opacity-60 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-300"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-white text-sm font-semibold mb-2">Preferred Music Style</label>
-                    <input
-                      name="music"
-                      placeholder="Epic, calm, energetic..."
-                      className="w-full p-4 border-2 border-white border-opacity-30 rounded-xl bg-white bg-opacity-10 text-white placeholder-white placeholder-opacity-60 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-300"
-                    />
-                  </div>
-                </div>
-                
-                <div>
-                  <label className="block text-white text-sm font-semibold mb-2">Image URLs (Optional)</label>
-                  <input
-                    name="images"
-                    placeholder="Add personal images that represent your goals (comma separated URLs)"
-                    className="w-full p-4 border-2 border-white border-opacity-30 rounded-xl bg-white bg-opacity-10 text-white placeholder-white placeholder-opacity-60 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-300"
-                  />
-                </div>
-                
-                <div className="text-center pt-6">
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="pulse-glow bg-yellow-400 text-purple-800 font-bold py-5 px-12 rounded-full text-xl hover:bg-yellow-300 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-purple-800 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                        </svg>
-                        Creating Your Mind Movie...
-                      </>
-                    ) : (
-                      <>
-                        Create My Mind Movie
-                        <svg className="w-6 h-6 inline-block ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                        </svg>
-                      </>
-                    )}
-                  </button>
-                  <p className="text-white text-opacity-70 text-sm mt-4">
-                    ✓ 100% Free Consultation ✓ 30-Day Money Back Guarantee ✓ Instant Download
-                  </p>
-                </div>
-              </Form>
+             <EnhancedMindMovieWizard/>
             </div>
           </div>
         </div>
       </section>
+
+      {/* <div>
+        
+      </div> */}
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
