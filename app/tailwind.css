@@ -10,7 +10,7 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-black font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105;
+    @apply bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-black font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105;
   }
   
   .card {
@@ -18,7 +18,7 @@
   }
   
   .input-field {
-    @apply w-full p-3 bg-white/20 border border-purple-400 rounded-lg text-white placeholder-gray-300 focus:border-gold-400 focus:outline-none focus:ring-2 focus:ring-gold-400/50;
+    @apply w-full p-3 bg-white/20 border border-purple-400 rounded-lg text-white placeholder-gray-300 focus:border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400/50;
   }
 }
 
@@ -37,4 +37,5 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(251,251, 251, 0.8)};
+  background: rgba(251,251, 251, 0.8);
+}

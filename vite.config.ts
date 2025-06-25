@@ -1,12 +1,16 @@
- 
 import { vitePlugin as remix } from "@remix-run/dev";
-import { installGlobals } from "@remix-run/node";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
-
-installGlobals();
+import autoprefixer from "autoprefixer";
+import tailwindcss from "tailwindcss";
+import path from "path";
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      "~": path.resolve(__dirname, "app"),
+    },
+  },
   plugins: [
     remix({
       ignoredRouteFiles: ["**/.*"],
@@ -15,10 +19,7 @@ export default defineConfig({
   ],
   css: {
     postcss: {
-      plugins: [
-        require('tailwindcss'),
-        require('autoprefixer'),
-      ],
+      plugins: [tailwindcss(), autoprefixer()],
     },
   },
 });
